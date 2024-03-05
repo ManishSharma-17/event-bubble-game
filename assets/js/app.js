@@ -1,3 +1,13 @@
+let correct = document.querySelector("#correct");
+let wrong = document.querySelector("#wrong");
+
+function correctSound() {
+    correct.play()
+}
+function wrongSound() {
+    wrong.play()
+}
+
 function makeBubble() {
     let bubble = "";
     for (let i = 0; i <= 500; i++) {
@@ -8,7 +18,7 @@ function makeBubble() {
 };
 makeBubble()
 
-let time = 60;
+let time = 30;
 function runtimer() {
     let timeslap = setInterval(() => {
         if (time > 0) {
@@ -39,9 +49,12 @@ document.querySelector("#panel>section").addEventListener("click", function (e) 
     if (e.target.className === "bubble") {
         let clickedBubble = Number(e.target.textContent);
         if (clickedBubble === hitrun) {
+            correctSound();
             increaseScore();
             makeBubble();
             getNewHit();
+        } else {
+            wrongSound()
         }
     }
-})
+});
