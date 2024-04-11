@@ -70,3 +70,12 @@ section::-webkit-scrollbar-thumb {
     background-color: rgb(29, 129, 29);
     border-radius: 22px;
 }
+
+.restart {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.restart:hover {
+    color: green;
+}
