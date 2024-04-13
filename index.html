@@ -14,9 +14,19 @@
 </head>
 
 <body>
-
     <div id="main">
-        <div id="panel" class="d-flex flex-column">
+        <div class="infoBox">
+            <h2>Welcome to the event bubble game 👋</h2>
+            <p>Read the instructions carefully: You have <b>Hit</b>, <b>Timer</b>, <b>Score</b></p>
+            <ul>
+                <li>You have to hit the number that will shown in this(Hit) box. On the top of the box.</li>
+                <li>If you press the right bubble the time will increase by 2 seconds and if not then the time will
+                    decrease by 2 seconds.</li>
+                <li>Every right click gives you 10 points and opposite for the loss.</li>
+            </ul>
+            <Span class="startBtn">Get Start</Span>
+        </div>
+        <div id="panel" class="d-flex flex-column d-none">
             <nav class="py-4 px-2">
                 <ul class="p-0 m-0 d-flex justify-content-evenly flex-wrap gap-3">
                     <li class="d-flex text-white align-items-center gap-2">
@@ -38,6 +48,9 @@
             </section>
         </div>
     </div>
+    <div class="shake">
+        <div class="element"></div>
+    </div>
     <audio id="correct" src="./assets/audio/mixkit-correct-answer-notification-947.mp3"></audio>
     <audio id="wrong" src="./assets/audio/mixkit-wrong-electricity-buzz-955.mp3"></audio>
 
@@ -46,7 +59,6 @@
         crossorigin="anonymous"></script>
 
     <script src="./assets/js/app.js"></script>
-
 </body>
 
 </html>
